@@ -88,6 +88,29 @@
   <p><label for="password">Password:</label>
   <input type="password" id="password" name="password" placeholder="Enter your password"></p>
 </form>
+<div class="container mt-3">
+  <button type="button" class="btn btn-primary" id="toastbtn">Login</button>
+  
+  <div class="toast">
+    <div class="toast-header">
+      <strong class="me-auto">Toast Header</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      <p>Some text inside the toast body</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById("toastbtn").onclick = function() {
+  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  var toastList = toastElList.map(function(toastEl) {
+    return new bootstrap.Toast(toastEl)
+  })
+  toastList.forEach(toast => toast.show()) 
+}
+</script>
         </div>
     <footer>
           &copy; 2025 CyberSecure. All rights reserved.
