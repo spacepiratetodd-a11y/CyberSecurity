@@ -67,7 +67,10 @@
       color: white;
         text-align: left;
     }
-    </style>
+    .toast .toast-body {
+  color: #000 !important;
+}
+  </style>
 </head>
 <body>
     <header>
@@ -91,17 +94,17 @@
 <div class="container mt-3">
   <button type="button" class="btn btn-primary" id="toastbtn">Login</button>
   
-  <div class="toast">
-    <div class="toast-header">
-      <strong class="me-auto">GOTCHA!</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-    </div>
-    <div class="toast-body">
-      <p>You've just entered your private login information on a dummy site. It's that simple. And that fast.</p>
-      <p>Here's a helpful link to check the legitimacy of a website before you enter any sensitive information.</p>
-    </div>
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <strong class="me-auto">GOTCHA!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+  </div>
+  <div class="toast-body text-dark">
+    You've just entered your private login information on a dummy site. It's that simple. And that fast.
+    Here's a helpful link to check the legitimacy of a website before you enter any sensitive information.
   </div>
 </div>
+  </div>
 
 <script>
 document.getElementById("toastbtn").onclick = function() {
